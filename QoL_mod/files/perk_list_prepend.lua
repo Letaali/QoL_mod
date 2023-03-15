@@ -1,0 +1,1 @@
+dofile_once( "data/scripts/gun/gun_enums.lua")
