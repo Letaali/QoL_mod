@@ -1,26 +1,15 @@
 # QoL_mod
 A quality of life mod for Noita. List of fixes inside.
 
+Lots of things that were fixed by this mod are now patched so I removed them from the mod and the list below. I left the old list of fixes inside the mod for anyone curious.
+
 Current fixes:
--Chainsaw fix. Removes AudioComponent from chainsaw, preventing it from filling up memory.
 
--Perk list fix. Makes Oil Blood, Gas Blood, Electricity and Explosive Corpses remove the related immunities from the pool like they were supposed to
-
--Mortal Kolmi. Fixes two bugs that could make the final boss unkillable. (Thanks Extol)
+-Perk list fix. Makes Oil Blood, Gas Blood, Electricity and Explosive Corpses remove the related immunities from the pool like they were supposed to.
 
 -Nightmare fix. Ensures that in nightmare mode the spreading sidebiomes do not overwrite Orb Rooms, Boss Arena or the Work.
 
--Friend fix. Makes Friend actually get buffs from horror monster kills.
-
--Spells to Power fix. Minimum particle amount is now 0. Negative particle amounts causes Noita to freeze and crash, which tentacle spells can cause.
-
--Runestone fix. Item pedestals could only spawn Runestone of Edges. Now all of them spawn like they were intended.
-
--Always cast perk fix. The Always Cast perk could not give Modifiers, Static Projectiles or Utility spells due to missing enums. Now it can.
-
 -Sunstone fix. Sunseed and sunstone items can no longer be deleted during NG+ entry.
-
--Ice mage fix. They now correctly spawn in frozen vault.
 
 -Copy Three Random Spells fix. This spell didn't always create 3 copies like promised, because of draw in the middle of the cast. It now gets 3 random spells first and then calls them.
 
