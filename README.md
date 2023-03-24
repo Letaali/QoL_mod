@@ -28,3 +28,5 @@ Current fixes:
 -HM statue quality of life. Statues can no longer die, letting you test damage on them as much as you like.
 
 -Sun Crystal fix. The crystals that spawn on the scale easily lose the entity tied to them. The floating island now also spawns material checkers in case the entity is gone.
+
+-Freezing gaze and Circle of Stillness are a lot better for performance now. (thanks Conga Lyne)
