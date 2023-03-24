@@ -10,3 +10,10 @@ ModLuaFileAppend( "data/scripts/gun/gun_actions.lua", "mods/QoL_mod/files/gun_ac
 --Sun Crystal fix
 
 ModLuaFileAppend( "data/scripts/biomes/mountain/mountain_floating_island.lua", "mods/QoL_mod/files/mountain_floating_island_append.lua")
+
+--Healderdrone fix
+
+local fileContents = ModTextFileGetContent("data/scripts/biomes/snowcastle.lua")
+local pattern = "healderdrone"
+fileContents = string.gsub(fileContents, pattern, "healerdrone")
+ModTextFileSetContent("data/scripts/biomes/snowcastle.lua", fileContents)
