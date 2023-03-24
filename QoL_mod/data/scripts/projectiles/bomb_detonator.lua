@@ -9,7 +9,8 @@ local comp2 = EntityGetFirstComponent( entity_id, "ProjectileComponent" )
 -- print( tostring( comp2 ) )
 
 if ( #projectiles > 0 ) and ( comp2 ~= nil ) then
-	for i,projectile_id in ipairs(projectiles) do
+	for k=1,#projectiles
+	do projectile_id = projectiles[k]
 		local comp = EntityGetFirstComponent( projectile_id, "ProjectileComponent" )
 		
 		if ( comp ~= nil ) and ( entity_id ~= projectile_id ) then
