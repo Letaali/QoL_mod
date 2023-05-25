@@ -3,11 +3,7 @@ A quality of life mod for Noita. List of fixes inside.
 
 Lots of things that were fixed by this mod are now patched so I removed them from the mod and the list below. I left the old list of fixes inside the mod for anyone curious.
 
-Current fixes:
-
 -Perk list fix. Makes Oil Blood, Gas Blood, Electricity and Explosive Corpses remove the related immunities from the pool like they were supposed to.
-
--Nightmare fix. Ensures that in nightmare mode the spreading sidebiomes do not overwrite Orb Rooms, Boss Arena or the Work.
 
 -Sunstone fix. Sunseed and sunstone items can no longer be deleted during NG+ entry.
 
@@ -29,4 +25,4 @@ Current fixes:
 
 -Sun Crystal fix. The crystals that spawn on the scale easily lose the entity tied to them. The floating island now also spawns material checkers in case the entity is gone.
 
--Freezing gaze and Circle of Stillness are a lot better for performance now. (thanks Conga Lyne)
+-Ice ball performance fix. (Thanks Conga Lyne)
