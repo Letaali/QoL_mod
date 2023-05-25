@@ -1,7 +1,4 @@
 
-if (ModIsEnabled("nightmare")) then
-    ModLuaFileAppend( "mods/nightmare/files/biome_map.lua", "mods/QoL_mod/files/biome_map_append.lua")
-end
 
 --Copy three fix
 
@@ -17,3 +14,10 @@ local fileContents = ModTextFileGetContent("data/scripts/biomes/snowcastle.lua")
 local pattern = "healderdrone"
 fileContents = string.gsub(fileContents, pattern, "healerdrone")
 ModTextFileSetContent("data/scripts/biomes/snowcastle.lua", fileContents)
+
+--Related perk fix
+
+local fileContents = ModTextFileGetContent("data/scripts/perks/perk.lua")
+local pattern = "GameAddFlagRun%( f %)"
+fileContents = string.gsub(fileContents, pattern,'GameAddFlagRun%( f %) \n local pickup_count = tonumber%( GlobalsGetValue%( f %.%. "_PICKUP_COUNT", "0" %) %) \n pickup_count = pickup_count %+ 1 \n GlobalsSetValue%( f %.%. "_PICKUP_COUNT", tostring%( pickup_count %) %)')
+ModTextFileSetContent("data/scripts/perks/perk.lua", fileContents)
