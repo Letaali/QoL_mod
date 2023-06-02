@@ -26,3 +26,5 @@ Lots of things that were fixed by this mod are now patched so I removed them fro
 -Sun Crystal fix. The crystals that spawn on the scale easily lose the entity tied to them. The floating island now also spawns material checkers in case the entity is gone.
 
 -Ice ball performance fix. (Thanks Conga Lyne)
+
+-Ending fix. Fixed a softlock from using Sampo in the wrong spot while having 33 or more orbs.
