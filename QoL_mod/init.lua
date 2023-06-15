@@ -21,3 +21,13 @@ local fileContents = ModTextFileGetContent("data/scripts/perks/perk.lua")
 local pattern = "GameAddFlagRun%( f %)"
 fileContents = string.gsub(fileContents, pattern,'GameAddFlagRun%( f %) \n local pickup_count = tonumber%( GlobalsGetValue%( f %.%. "_PICKUP_COUNT", "0" %) %) \n pickup_count = pickup_count %+ 1 \n GlobalsSetValue%( f %.%. "_PICKUP_COUNT", tostring%( pickup_count %) %)')
 ModTextFileSetContent("data/scripts/perks/perk.lua", fileContents)
+
+--Moon radar QoL
+
+do -- Append Moon radar perk
+    local path = "data/scripts/perks/radar_moon.lua"
+    ModTextFileSetContent(
+        path,
+        ModTextFileGetContent(path) .. ModTextFileGetContent("mods/QoL_mod/files/radar_moon_append.lua")
+    )
+end
