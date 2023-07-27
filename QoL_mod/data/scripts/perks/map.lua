@@ -71,38 +71,40 @@ if ( timercomp ~= nil ) and ( entity_id ~= player_id ) then
 			
 			
 			--Parallel Counter
-            local pw_string = tostring(pw)
-            local pw_string_length = string.len(pw_string)
-            local num_table = {}
+			if(pw ~= 0) then
+				local pw_string = tostring(pw)
+				local pw_string_length = string.len(pw_string)
+				local num_table = {}
 
-            for i = 1, pw_string_length, 1 do
-                num_table[i] = string.sub(pw_string, i, i)
-            end
-
-            local num_positions = {}
-            local start_pos = 0
-            local count = 1
-            if pw_string_length % 2 == 1 then
-                start_pos = -(pw_string_length - 1) / 2
-                for i = start_pos, start_pos + pw_string_length - 1, 1 do
-                    num_positions[count] = i
-                    count = count + 1
-                end
-            else
-                start_pos = -((pw_string_length / 2) - 0.5)
-                for i = start_pos, start_pos + pw_string_length - 1, 1 do
-                    num_positions[count] = i
-                    count = count + 1
-                end
-            end
-
-            for i, offset in ipairs(num_positions) do
-                local num_name = num_table[i];
-                if num_name == "-" then
-                    num_name = "minus_sign"
-                end
-                GameCreateSpriteForXFrames( "mods/QoL_mod/files/pw_nums/pw_num_"..num_name..".png", mi_x + 9 + 6 * offset, mi_y - 82, true, 0, 0, 1, true )
-            end
+				for i = 1, pw_string_length, 1 do
+					num_table[i] = string.sub(pw_string, i, i)
+				end
+	
+				local num_positions = {}
+				local start_pos = 0
+				local count = 1
+				if pw_string_length % 2 == 1 then
+					start_pos = -(pw_string_length - 1) / 2
+					for i = start_pos, start_pos + pw_string_length - 1, 1 do
+						num_positions[count] = i
+						count = count + 1
+					end
+					else
+					start_pos = -((pw_string_length / 2) - 0.5)
+						for i = start_pos, start_pos + pw_string_length - 1, 1 do
+						num_positions[count] = i
+						count = count + 1
+					end
+				end
+	
+				for i, offset in ipairs(num_positions) do
+					local num_name = num_table[i];
+					if num_name == "-" then
+						num_name = "minus_sign"
+					end
+					GameCreateSpriteForXFrames( "mods/QoL_mod/files/pw_nums/pw_num_"..num_name..".png", mi_x + 9 + 6 * offset, mi_y - 82, true, 0, 0, 1, true )
+				end
+			end
 		end
 	else
 		timer = 0

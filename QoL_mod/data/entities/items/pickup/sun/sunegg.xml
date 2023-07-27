@@ -84,18 +84,7 @@
 		>
 	</MagicConvertMaterialComponent>
 	
-	<MagicConvertMaterialComponent
-		_tags="enabled_in_world,enabled_in_hand"
-		kill_when_finished="0"
-		ignite_materials="1"
-		steps_per_frame="2"
-		fan_the_flames="1"
-		clean_stains="0"
-		is_circle="1"
-		radius="140" 
-		loop="1"
-		>
-	</MagicConvertMaterialComponent>
+
 	
 	<CellEaterComponent
 		radius="72"

@@ -32,3 +32,5 @@ Lots of things that were fixed by this mod are now patched so I removed them fro
 -Moon radar QoL. Moon radar can now track all kinds of celestial bodies.
 
 -Spatial Awareness QoL. Spatial Awareness can now count beyond 3. (Thanks Priskip!)
+
+-Gold drop performance fix. In very long runs, enemies could spawn enough gold to cause significant performance hit. Single enemy is limited to 400k now. (Thanks Conga Lyne!)
