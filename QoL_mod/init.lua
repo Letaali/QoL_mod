@@ -44,3 +44,53 @@ do
   content = content:gsub("local x, y = EntityGetTransform( entity )", "if money > 400050 then money = 400050 end local x, y = EntityGetTransform( entity )")
   ModTextFileSetContent(path, content)
 end
+
+--Ruby fix.
+
+do
+local fileContents = ModTextFileGetContent("data/entities/animals/boss_centipede/ending/sampo_start_ending_sequence.lua")
+local pattern = "-- AddFlagPersistent( \"secret_amulet_gem\" )"
+fileContents = string.gsub(fileContents, pattern, "AddFlagPersistent( \"secret_amulet_gem\" )")
+ModTextFileSetContent("data/entities/animals/boss_centipede/ending/sampo_start_ending_sequence.lua", fileContents)
+end
+
+--Iron stomach qol
+do 
+--Append status effects for iron stomach
+    local path = "data/scripts/status_effects/status_list.lua"
+    ModTextFileSetContent(
+        path,
+        ModTextFileGetContent(path) .. ModTextFileGetContent("mods/QoL_mod/files/iron_stomach_qol/status_list_append.lua")
+    )
+	
+	function replace(file, target, text)
+		local content = ModTextFileGetContent(file)
+		local first, last = content:find(target, 0, true)
+		local before = content:sub(1, first - 1)
+		local after = content:sub(last + 1)
+		local new = before .. text .. after
+		ModTextFileSetContent(file, new)
+	end
+	
+	--Adding new ingestion effects into materials.xml
+	local polypattern = "POLYMORPH\" amount=\"0.2\" />"
+	local poly_add = "\n <StatusEffect type=\"POLYMORPH_IRON\" amount=\"0.2\" />"
+
+	local polyrpattern = "POLYMORPH_RANDOM\" amount=\"0.2\" />"
+	local polyr_add = "\n <StatusEffect type=\"POLYMORPH_RANDOM_IRON\" amount=\"0.2\" />"
+
+	local polyupattern = "POLYMORPH_UNSTABLE\" amount=\"0.2\" />"
+	local polyu_add = "\n <StatusEffect type=\"POLYMORPH_UNSTABLE_IRON\" amount=\"0.2\" />"
+
+	local poisonpattern = "POISONED\" amount=\"0.1\" />"
+	local poison_add = "\n <StatusEffect type=\"POISONED_IRON\" amount=\"0.1\" />"
+	
+	replace("data/materials.xml", polypattern, polypattern .. poly_add )
+	replace("data/materials.xml", polyrpattern, polyrpattern .. polyr_add )
+	replace("data/materials.xml", polyupattern, polyupattern .. polyu_add )
+	
+	local fileContents = ModTextFileGetContent("data/materials.xml")
+	local poisonpattern = "POISONED\" amount=\"0.1\" />"
+	fileContents = string.gsub(fileContents, poisonpattern, poisonpattern .. poison_add)
+	ModTextFileSetContent("data/materials.xml", fileContents)
+end

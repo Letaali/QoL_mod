@@ -1,6 +1,8 @@
 # QoL_mod
 A quality of life mod for Noita. List of fixes inside.
 
+Bugfixes and quality of life changes for Noita.
+
 Lots of things that were fixed by this mod are now patched so I removed them from the mod and the list below. I left the old list of fixes inside the mod for anyone curious.
 
 -Perk list fix. Makes Oil Blood, Gas Blood, Electricity and Explosive Corpses remove the related immunities from the pool like they were supposed to.
@@ -34,3 +36,5 @@ Lots of things that were fixed by this mod are now patched so I removed them fro
 -Spatial Awareness QoL. Spatial Awareness can now count beyond 3. (Thanks Priskip!)
 
 -Gold drop performance fix. In very long runs, enemies could spawn enough gold to cause significant performance hit. Single enemy is limited to 400k now. (Thanks Conga Lyne!)
+
+-Iron Stomach QoL. When ingesting poly liquids or poisons, player would get briefly immune to those status effects. The duration is now visible on the UI.

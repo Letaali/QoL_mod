@@ -1,0 +1,10 @@
+<Entity>
+   
+	<LuaComponent
+		execute_on_removed="1"
+		execute_every_n_frame="1"
+		script_source_file="mods/qol_mod/files/iron_stomach_qol/remove_status.lua"
+		>
+	</LuaComponent>
+  
+</Entity>
