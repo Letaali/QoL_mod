@@ -31,7 +31,7 @@ local status_effects_appends =
 	{
 		id="POISONED_IRON",
 		ui_name="Poison immunity",
-		ui_description="Touching poisons doesn't bother you.",
+		ui_description="Poison stains don't bother you.",
 		ui_icon= "mods/qol_mod/files/iron_stomach_qol/iron_poison.png",
 		effect_entity="mods/QoL_mod/files/iron_stomach_qol/iron_stomach_check.xml",
 		is_harmful=false,

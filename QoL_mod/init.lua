@@ -82,15 +82,14 @@ do
 	local polyupattern = "POLYMORPH_UNSTABLE\" amount=\"0.2\" />"
 	local polyu_add = "\n <StatusEffect type=\"POLYMORPH_UNSTABLE_IRON\" amount=\"0.2\" />"
 
-	local poisonpattern = "POISONED\" amount=\"0.1\" />"
-	local poison_add = "\n <StatusEffect type=\"POISONED_IRON\" amount=\"0.1\" />"
+	local poisonpattern = "POISONED\" amount=\"(%d?%.%d+)\" />"
+	local poison_add = "\n <StatusEffect type=\"POISONED_IRON\" amount=\"%1\" />"
 	
 	replace("data/materials.xml", polypattern, polypattern .. poly_add )
 	replace("data/materials.xml", polyrpattern, polyrpattern .. polyr_add )
 	replace("data/materials.xml", polyupattern, polyupattern .. polyu_add )
 	
 	local fileContents = ModTextFileGetContent("data/materials.xml")
-	local poisonpattern = "POISONED\" amount=\"0.1\" />"
 	fileContents = string.gsub(fileContents, poisonpattern, poisonpattern .. poison_add)
 	ModTextFileSetContent("data/materials.xml", fileContents)
 end
