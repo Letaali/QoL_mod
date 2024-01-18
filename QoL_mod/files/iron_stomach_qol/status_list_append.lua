@@ -30,8 +30,8 @@ local status_effects_appends =
 	
 	{
 		id="POISONED_IRON",
-		ui_name="Poison immunity",
-		ui_description="Poison stains don't bother you.",
+		ui_name="Poison stain immunity",
+		ui_description="Poison stains won't hurt you.",
 		ui_icon= "mods/qol_mod/files/iron_stomach_qol/iron_poison.png",
 		effect_entity="mods/QoL_mod/files/iron_stomach_qol/iron_stomach_check.xml",
 		is_harmful=false,
@@ -39,9 +39,9 @@ local status_effects_appends =
 	}
 
 
-	for k=1,#status_effects_appends
-	do local v = status_effects_appends[k]
-		table.insert(status_effects,v)
-	end
+for k=1,#status_effects_appends do 
+	local v = status_effects_appends[k]
+	table.insert(status_effects,v)
+end
 
 	
