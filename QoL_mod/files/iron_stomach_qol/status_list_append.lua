@@ -29,7 +29,7 @@ local status_effects_appends =
 	},
 	
 	{
-		id="POISONED_IRON",
+		id="IRON_POISON",
 		ui_name="Poison stain immunity",
 		ui_description="Poison stains won't hurt you.",
 		ui_icon= "mods/qol_mod/files/iron_stomach_qol/iron_poison.png",

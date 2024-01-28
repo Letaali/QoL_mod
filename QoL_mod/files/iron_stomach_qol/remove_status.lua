@@ -6,5 +6,5 @@ else
 	EntityRemoveIngestionStatusEffect( player, "POLYMORPH_IRON")
 	EntityRemoveIngestionStatusEffect( player, "POLYMORPH_RANDOM_IRON")
 	EntityRemoveIngestionStatusEffect( player, "POLYMORPH_UNSTABLE_IRON")
-	EntityRemoveIngestionStatusEffect( player, "POISONED_IRON")
+	EntityRemoveIngestionStatusEffect( player, "IRON_POISON")
 end
