@@ -27,7 +27,7 @@ local status_effects_appends =
 		effect_entity="mods/QoL_mod/files/iron_stomach_qol/iron_stomach_check.xml",
 		is_harmful=false,
 	},
-	
+	--[[
 	{
 		id="IRON_POISON",
 		ui_name="Poison stain immunity",
@@ -35,7 +35,7 @@ local status_effects_appends =
 		ui_icon= "mods/qol_mod/files/iron_stomach_qol/iron_poison.png",
 		effect_entity="mods/QoL_mod/files/iron_stomach_qol/iron_stomach_check.xml",
 		is_harmful=false,
-	},
+	},]]
 	}
 
 

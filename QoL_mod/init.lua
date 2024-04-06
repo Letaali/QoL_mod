@@ -79,12 +79,14 @@ do
 	local polyupattern = "POLYMORPH_UNSTABLE\" amount=\"0.2\" />"
 	local polyu_add = "\n <StatusEffect type=\"POLYMORPH_UNSTABLE_IRON\" amount=\"0.2\" />"
 
-	local poisonpattern = "POISONED\" amount=\"(%d?%.%d+)\" />"
-	local poison_add = "\n <StatusEffect type=\"IRON_POISON\" amount=\"%1\" />"
+	--local poisonpattern = "POISONED\" amount=\"(%d?%.%d+)\" />"
+	--local poison_add = "\n <StatusEffect type=\"IRON_POISON\" amount=\"%1\" />"
 	
 	replace("data/materials.xml", polypattern, polypattern .. poly_add )
 	replace("data/materials.xml", polyrpattern, polyrpattern .. polyr_add )
 	replace("data/materials.xml", polyupattern, polyupattern .. polyu_add )
+	
+	--If player has no iron stomach, removing this new status effect would remove poisoned status too. Disabled for now.
 	
 	--local fileContents = ModTextFileGetContent("data/materials.xml")
 	--fileContents = string.gsub(fileContents, poisonpattern, poisonpattern .. poison_add)

@@ -1,6 +1,4 @@
 # QoL_mod
-A quality of life mod for Noita. List of fixes inside.
-
 Bugfixes and quality of life changes for Noita.
 
 Lots of things that were fixed by this mod are now patched so I removed them from the mod and the list below. I left the old list of fixes inside the mod for anyone curious.
@@ -12,8 +10,6 @@ Lots of things that were fixed by this mod are now patched so I removed them fro
 -Copy Three Random Spells fix. This spell didn't always create 3 copies like promised, because of draw in the middle of the cast. It now gets 3 random spells first and then calls them.
 
 -Ruby fix. A cosmetic reward wasn't being awarded reliably, it should work better now.
-
--Healder drone fix. Hiisi base was supposed to rarely spawn healer drones, but a typo prevented it.
 
 -Crystal key fix. Fixed an issue where losing a crystal key that had listened to a music machine would lock you out of the quest.
 
@@ -37,4 +33,4 @@ Lots of things that were fixed by this mod are now patched so I removed them fro
 
 -Gold drop performance fix. In very long runs, enemies could spawn enough gold to cause significant performance hit. Single enemy is limited to 400k now. (Thanks Conga Lyne!)
 
--Iron Stomach QoL. When ingesting poly liquids or poisons, player would get briefly immune to those status effects. The duration is now visible on the UI.
+-Iron Stomach QoL. When ingesting poly liquids or poisons, player would get briefly immune to those status effects. The duration is now visible on the UI.(Poison part disabled for now due to issue)
