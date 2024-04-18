@@ -22,8 +22,6 @@
 
 -Ruby fix. A cosmetic reward wasn't being awarded reliably, it should work better now.
 
--Healder drone fix. Hiisi base was supposed to rarely spawn healer drones, but a typo prevented it.
-
 -Crystal key fix. Fixed an issue where losing a crystal key that had listened to a music machine would lock you out of the quest.
 
 -Fungal shifting quality of life. Dark cave next to mines now spawns some green fungus so you can always do shifting.

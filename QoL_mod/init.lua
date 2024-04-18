@@ -15,14 +15,14 @@ do
 end
 
 --Related perk fix
-
+--[[
 do
 local fileContents = ModTextFileGetContent("data/scripts/perks/perk.lua")
 local pattern = "GameAddFlagRun%( f %)"
 fileContents = string.gsub(fileContents, pattern,'GameAddFlagRun%( f %) \n local pickup_count = tonumber%( GlobalsGetValue%( f %.%. "_PICKUP_COUNT", "0" %) %) \n pickup_count = pickup_count %+ 1 \n GlobalsSetValue%( f %.%. "_PICKUP_COUNT", tostring%( pickup_count %) %)')
 ModTextFileSetContent("data/scripts/perks/perk.lua", fileContents)
 end
-
+]]
 --Moon radar QoL
 
 do -- Append Moon radar perk
