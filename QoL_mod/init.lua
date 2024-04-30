@@ -33,15 +33,6 @@ do -- Append Moon radar perk
     )
 end
 
---Limit max gold drop for performance reasons.
-
-do
-  local path = "data/scripts/items/drop_money.lua"
-  local content = ModTextFileGetContent(path)
-  content = content:gsub("local x, y = EntityGetTransform( entity )", "if money > 400050 then money = 400050 end local x, y = EntityGetTransform( entity )")
-  ModTextFileSetContent(path, content)
-end
-
 --Ruby fix.
 
 do

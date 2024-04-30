@@ -19,12 +19,8 @@ Lots of things that were fixed by this mod are now patched so I removed them fro
 
 -Sun Crystal fix. The crystals that spawn on the scale easily lose the entity tied to them. The floating island now also spawns material checkers in case the entity is gone.
 
--Ending fix. Fixed a softlock from using Sampo in the wrong spot while having 33 or more orbs.
-
 -Moon radar QoL. Moon radar can now track all kinds of celestial bodies.
 
 -Spatial Awareness QoL. Spatial Awareness can now count beyond 3. (Thanks Priskip!)
-
--Gold drop performance fix. In very long runs, enemies could spawn enough gold to cause significant performance hit. Single enemy is limited to 400k now. (Thanks Conga Lyne!)
 
 -Iron Stomach QoL. When ingesting poly liquids or poisons, player would get briefly immune to those status effects. The duration is now visible on the UI.(Poison part disabled for now due to issue)
