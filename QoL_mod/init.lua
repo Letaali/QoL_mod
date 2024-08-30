@@ -14,15 +14,15 @@ do
     )
 end
 
---Related perk fix
---[[
+-- Lukki transformation removal fix
+
 do
 local fileContents = ModTextFileGetContent("data/scripts/perks/perk.lua")
-local pattern = "GameAddFlagRun%( f %)"
-fileContents = string.gsub(fileContents, pattern,'GameAddFlagRun%( f %) \n local pickup_count = tonumber%( GlobalsGetValue%( f %.%. "_PICKUP_COUNT", "0" %) %) \n pickup_count = pickup_count %+ 1 \n GlobalsSetValue%( f %.%. "_PICKUP_COUNT", tostring%( pickup_count %) %)')
+local pattern = "player_hat\", false %)"
+fileContents = string.gsub(fileContents, pattern, ModTextFileGetContent("mods/QoL_mod/files/lukki_removal_fix.lua"))
 ModTextFileSetContent("data/scripts/perks/perk.lua", fileContents)
 end
-]]
+
 --Moon radar QoL
 
 do -- Append Moon radar perk
@@ -40,6 +40,15 @@ local fileContents = ModTextFileGetContent("data/entities/animals/boss_centipede
 local pattern = "-- AddFlagPersistent( \"secret_amulet_gem\" )"
 fileContents = string.gsub(fileContents, pattern, "AddFlagPersistent( \"secret_amulet_gem\" )")
 ModTextFileSetContent("data/entities/animals/boss_centipede/ending/sampo_start_ending_sequence.lua", fileContents)
+end
+
+--Spells to Power fix
+
+do
+local fileContents = ModTextFileGetContent("data/scripts/projectiles/spells_to_power.lua")
+local pattern = "count %+ expcount"
+fileContents = string.gsub(fileContents, pattern, "math%.max%(0%.001, count %+ expcount%)")
+ModTextFileSetContent("data/scripts/projectiles/spells_to_power.lua", fileContents)
 end
 
 --Iron stomach qol

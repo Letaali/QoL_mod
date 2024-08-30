@@ -23,3 +23,7 @@ Lots of things that were fixed by this mod are now patched so I removed them fro
 -Spatial Awareness QoL. Spatial Awareness can now count beyond 3. (Thanks Priskip!)
 
 -Iron Stomach QoL. When ingesting poly liquids or poisons, player would get briefly immune to those status effects. The duration is now visible on the UI.(Poison part disabled for now due to issue)
+
+-Spells to Power fix. When not finding anything to absorb, this modifier could rarely freeze the game. Should no longer happen.
+
+-Lukki transformation fix. Fixed player sprite remaining transparent after using nullifying altar while having lukki transformation.
