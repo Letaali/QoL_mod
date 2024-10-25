@@ -1,8 +1,6 @@
 # QoL_mod
 Bugfixes and quality of life changes for Noita.
 
-Lots of things that were fixed by this mod are now patched so I removed them from the mod and the list below. I left the old list of fixes inside the mod for anyone curious.
-
 -Sunstone fix. Sunseed and sunstone items can no longer be deleted during NG+ entry.
 
 -Copy Three Random Spells fix. This spell didn't always create 3 copies like promised, because of draw in the middle of the cast. It now gets 3 random spells first and then calls them.
@@ -23,4 +21,8 @@ Lots of things that were fixed by this mod are now patched so I removed them fro
 
 -Spatial Awareness QoL. Spatial Awareness can now count beyond 3. (Thanks Priskip!)
 
--Iron Stomach QoL. When ingesting poly liquids or poisons, player would get briefly immune to those status effects. The duration is now visible on the UI.(Poison part disabled for now due to issue)
+-Iron Stomach QoL. When ingesting poly liquids or poisons, player would get briefly immune to those status effects. The duration is now visible on the UI.
+
+-Spells to Power fix. When not finding anything to absorb, this modifier could rarely freeze the game. Should no longer happen.
+
+-Lukki transformation fix. Fixed player sprite remaining transparent after using nullifying altar while having lukki transformation.
