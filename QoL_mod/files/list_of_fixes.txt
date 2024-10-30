@@ -25,3 +25,5 @@ Bugfixes and quality of life changes for Noita.
 -Spells to Power fix. When not finding anything to absorb, this modifier could rarely freeze the game. Should no longer happen.
 
 -Lukki transformation fix. Fixed player sprite remaining transparent after using nullifying altar while having lukki transformation.
+
+-Ending fix. If multiple ending spots were loaded at once, the script could calculate distance to wrong spot and fail.

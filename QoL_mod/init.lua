@@ -1,11 +1,9 @@
 
 
 --Copy three fix
-
 ModLuaFileAppend( "data/scripts/gun/gun_actions.lua", "mods/QoL_mod/files/gun_actions_append.lua")
 
 --Sun Crystal fix
-
 do 
     local path = "data/scripts/magic/altar_tablet_magic.lua"
     ModTextFileSetContent(
@@ -15,7 +13,6 @@ do
 end
 
 -- Lukki transformation removal fix
-
 do
 local fileContents = ModTextFileGetContent("data/scripts/perks/perk.lua")
 local pattern = "player_hat\", false %)"
@@ -24,8 +21,7 @@ ModTextFileSetContent("data/scripts/perks/perk.lua", fileContents)
 end
 
 --Moon radar QoL
-
-do -- Append Moon radar perk
+do
     local path = "data/scripts/perks/radar_moon.lua"
     ModTextFileSetContent(
         path,
@@ -34,7 +30,6 @@ do -- Append Moon radar perk
 end
 
 --Ruby fix.
-
 do
 local fileContents = ModTextFileGetContent("data/entities/animals/boss_centipede/ending/sampo_start_ending_sequence.lua")
 local pattern = "-- AddFlagPersistent( \"secret_amulet_gem\" )"
@@ -43,7 +38,6 @@ ModTextFileSetContent("data/entities/animals/boss_centipede/ending/sampo_start_e
 end
 
 --Spells to Power fix
-
 do
 local fileContents = ModTextFileGetContent("data/scripts/projectiles/spells_to_power.lua")
 local pattern = "count %+ expcount"
@@ -89,4 +83,12 @@ do
 	local fileContents = ModTextFileGetContent("data/materials.xml")
 	fileContents = string.gsub(fileContents, poisonpattern, "POISONED\" amount=\"%1\" />" .. poison_add)
 	ModTextFileSetContent("data/materials.xml", fileContents)
+end
+
+--Ending fix (If multiple ending spots are loaded, script fails a distance check in parallel worlds)
+do
+local fileContents = ModTextFileGetContent("data/entities/animals/boss_centipede/ending/sampo_start_ending_sequence.lua")
+local pattern = "ending_sampo_spot_mountain\" %)"
+fileContents = string.gsub(fileContents, pattern, ModTextFileGetContent("mods/QoL_mod/files/ending_fix.lua"))
+ModTextFileSetContent("data/entities/animals/boss_centipede/ending/sampo_start_ending_sequence.lua", fileContents)
 end
