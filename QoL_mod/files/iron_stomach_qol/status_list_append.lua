@@ -12,8 +12,8 @@ local status_effects_appends =
 	
 	{
 		id="POLYMORPH_RANDOM_IRON",
-		ui_name="Random Polymorphn't",
-		ui_description="Random Polymorphine doesn't bother you.",
+		ui_name="Chaotic Polymorphn't",
+		ui_description="Chaotic Polymorphine doesn't bother you.",
 		ui_icon="mods/qol_mod/files/iron_stomach_qol/iron_polychaos.png",
 		effect_entity="mods/QoL_mod/files/iron_stomach_qol/iron_stomach_check.xml",
 		is_harmful=false,
